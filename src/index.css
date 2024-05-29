@@ -1,0 +1,173 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+    @-webkit-keyframes ripple {
+      70% {
+        -webkit-box-shadow: 0 0 0 30px rgba(255, 255, 255, 0);
+        box-shadow: 0 0 0 30px rgba(255, 255, 255, 0);
+      }
+  
+      100% {
+        -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+      }
+    }
+  
+    html {
+      font-size: 16px
+    }
+  
+    body {
+      /* font-size: 14px; */
+      @apply text-14px font-medium font-bodyFont text-cyan-50 tracking-[-0.02em] antialiased overflow-x-hidden;
+    }
+    p{
+      @apply font-bodyFont
+    }
+  
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      @apply text-black font-bodyFont;
+    }
+  
+    h1 {
+      /* font-size: 45px; */
+      @apply text-95px font-semibold
+    }
+  
+    h2 {
+      /* font-size: 40px; */
+      @apply text-64px font-semibold
+    }
+  
+    h3 {
+      /* font-size: 24px; */
+      @apply text-48px font-semibold
+    }
+  
+    h4 {
+      /* font-size: 20px; */
+      @apply text-36px font-semibold
+    }
+  
+    h5 {
+      /* font-size: 18px; */
+      @apply text-27px font-semibold
+    }
+  
+    h6 {
+      /* font-size: 16px; */
+      @apply text-24px font-semibold
+    }
+  
+    @screen lg {
+      html {
+          @apply text-16px font-normal font-bodyFont text-cyan-50 tracking-[-0.02em] antialiased overflow-x-hidden;
+  
+      }
+  
+      h1 {
+        /* font-size: 57px; */
+        @apply text-[88px]
+      }
+  
+      h2 {
+        /* font-size: 45px; */
+        @apply text-[54px]
+      }
+  
+      h3 {
+        /* font-size: 24px; */
+        @apply text-[42px] font-semibold
+      }
+  
+      h4 {
+        /* font-size: 20px; */
+        @apply text-[30px] font-semibold
+      }
+  
+      h5 {
+        /* font-size: 18px; */
+        @apply text-24px font-semibold
+      }
+  
+      h6 {
+        /* font-size: 16px; */
+        @apply text-22px font-semibold
+      }
+    }
+  
+    @screen md {
+      html {
+        font-size: 16px
+      }
+  
+      h1 {
+        /* font-size: 57px; */
+        @apply text-[88px]
+      }
+  
+      h2 {
+        /* font-size: 45px; */
+        @apply text-48px
+      }
+  
+      h3 {
+        /* font-size: 24px; */
+        @apply text-[42px] font-semibold leading-[48px]
+      }
+  
+      h4 {
+        /* font-size: 20px; */
+        @apply text-[30px] font-semibold
+      }
+  
+      h5 {
+        /* font-size: 18px; */
+        @apply text-22px font-semibold
+      }
+    }
+  
+    @screen sm {
+      html {
+        font-size: 15px
+      }
+  
+      h1 {
+        /* font-size: 52px; */
+        @apply text-52px
+      }
+  
+      h2 {
+        /* font-size: 40px; */
+        @apply text-32px  
+      }
+  
+      h3 {
+        /* font-size: 24px; */
+        @apply text-28px font-semibold
+      }
+  
+      h4 {
+        /* font-size: 20px; */
+        @apply text-24px font-semibold
+      }
+  
+      h5 {
+        /* font-size: 18px; */
+        @apply text-20px font-semibold
+      }
+  
+      .booked-fusion-activities .items-inner-wrapper .items-inner h3 {
+        @apply text-20px
+      }
+  
+    }
+  }
