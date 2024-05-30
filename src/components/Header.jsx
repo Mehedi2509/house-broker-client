@@ -72,7 +72,7 @@ function Header() {
                 </div>
                 <ul tabIndex={0} className="mt-6 z-[1] p-4 shadow menu menu-sm dropdown-content bg-primary rounded-box w-52">
                   <li><Link to={"/login"}>Log In</Link></li>
-                  <li><Link to={"/registetion"}>Registetion</Link></li>
+                  <li><Link to={"/registration"}>Registration</Link></li>
                   <li>
                     <a className="justify-between">
                       Profile

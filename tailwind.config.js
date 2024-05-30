@@ -241,7 +241,7 @@ export default {
         light: {
           primary: '#e6fbfb',
           secondary: '#C67F43',
-          accent: '#43AA8B',
+          gray: '#D0E1EF',
           neutral: '#FBF5F3',
           "base-100": '#FFFFFF',
           info: '#3ABFF8',
