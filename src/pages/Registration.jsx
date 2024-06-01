@@ -1,6 +1,35 @@
 import { Link } from "react-router-dom";
+import useAuth from "../hooks/useAuth";
+import { useState } from "react";
 
 const Registration = () => {
+  const [passMatch, setPassMatch] = useState(true);
+  const {googleLogin, createUser} = useAuth();
+
+  const handleCreateUser = (e) =>{
+    e.preventDefault();
+
+    const form = e.target;
+    // const name = form.name.value;
+    // const img_uri = form.img_url.value;
+    const email = form.email.value;
+    const password = form.password.value;
+    const confirm_password = form.confirm_password.value;
+
+    if (password === confirm_password){
+      setPassMatch(true);
+      createUser(email, password);
+      form.reset();
+      alert('Creating accout successful')
+    }else{
+      setPassMatch(false);
+    }
+  }
+
+  const handleGoogleLogin = () =>{
+    googleLogin();
+  }
+
   return (
     <div className="registration-area">
       <div className="container">
@@ -15,7 +44,7 @@ const Registration = () => {
               </p>
             </div>
             <div className="card shrink-0 w-full max-w-lg shadow-2xl bg-base-100">
-              <form className="card-body">
+              <form className="card-body" onSubmit={handleCreateUser}>
                 <div className="form-control">
                   <label className="label">
                     <span className="label-text">Full Name</span>
@@ -24,7 +53,7 @@ const Registration = () => {
                     type="name"
                     placeholder="Type your name..."
                     className="input input-bordered"
-                    required
+                    name="name"
                   />
                 </div>
                 <div className="form-control">
@@ -35,7 +64,7 @@ const Registration = () => {
                     type="text"
                     placeholder="Enter your image url"
                     className="input input-bordered"
-                    required
+                    name="img_url"
                   />
                 </div>
                 <div className="form-control">
@@ -44,9 +73,9 @@ const Registration = () => {
                   </label>
                   <input
                     type="email"
-                    placeholder="email"
+                    placeholder="Enter your email"
                     className="input input-bordered"
-                    required
+                    name="email"
                   />
                 </div>
                 <div className="form-control">
@@ -55,10 +84,24 @@ const Registration = () => {
                   </label>
                   <input
                     type="password"
-                    placeholder="password"
+                    placeholder="Enter your password"
                     className="input input-bordered"
-                    required
+                    name="password"
                   />
+                </div>
+                <div className="form-control">
+                  <label className="label">
+                    <span className="label-text">Confirm Password</span>
+                  </label>
+                  <input
+                    type="password"
+                    placeholder="Re-enter your password"
+                    className="input input-bordered"
+                    name="confirm_password"
+                  />
+                  {
+                    !passMatch && (<p className="mt-3 px-4 py-3 rounded-4px text-18px font-medium text-black bg-red-100">Password isn't matched</p>)
+                  }
                   <label className="label flex justify-between mt-2">
                     <Link to={"/forget-password"} className="label-text-alt link link-hover text-16px">
                       Forgot password?
@@ -69,10 +112,10 @@ const Registration = () => {
                   </label>
                 </div>
                 <div className="form-control mt-6">
-                  <button className="btn btn-primary text-18px font-semibold">Submit</button>
+                  <input type="submit" value="Submit" className="btn btn-primary text-18px font-semibold" />
                 </div>
                 <p className="text-18px text-center">Or</p>
-                <button className="btn btn-gray text-18px font-semibold">Login With Google</button>
+                <button onClick={handleGoogleLogin} className="btn btn-gray text-18px font-semibold">Login With Google</button>
               </form>
             </div>
           </div>

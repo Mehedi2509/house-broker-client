@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
 import headerLogo from "../images/logo/logo.png";
+import useAuth from "../hooks/useAuth";
 
 function Header() {
+  const {logoutUser} = useAuth();
+
     return (
       <div className="header-area fixed w-full top-0 left-0 z-50">
         <div className="container-fluid max-w-[1920px] mx-auto">
@@ -80,7 +83,10 @@ function Header() {
                     </a>
                   </li>
                   <li><a>Settings</a></li>
-                  <li><a>Logout</a></li>
+                  <li><a onClick={()=> {
+                    logoutUser();
+                    alert('Logout successful')
+                    }}>Logout</a></li>
                 </ul>
               </div>
             </div>

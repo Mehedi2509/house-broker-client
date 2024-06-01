@@ -44,7 +44,7 @@ export default {
       'yellow-250': '#FFC12C',
       'red': '#FF698F',
       'red-50': '#FF5554',
-      'red-100': '#FEF2F2',
+      'red-100': '#ff8d8c',
       'pink': '#FFC6DE',
       'purple': '#C5D5FF',
       'light-gray': '#edf0f8',
