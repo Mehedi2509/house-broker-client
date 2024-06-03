@@ -3,7 +3,12 @@ import headerLogo from "../images/logo/logo.png";
 import useAuth from "../hooks/useAuth";
 
 function Header() {
-  const {logoutUser} = useAuth();
+  const {user, logoutUser} = useAuth();
+
+  const handleLogoutUser = () =>{
+    logoutUser();
+    alert('Logout successful')
+  }
 
     return (
       <div className="header-area fixed w-full top-0 left-0 z-50">
@@ -14,14 +19,8 @@ function Header() {
                 <div tabIndex={0} role="button" className="btn btn-ghost hidden lg:flex">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                 </div>
-                <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                  <li>
-                    <a>Home</a>
-                    <ul className="p-2">
-                      <li><Link to={"/"}>Home Style 1</Link></li>
-                      <li><Link to={"/home-2"}>Home Style 2</Link></li>
-                    </ul>
-                  </li>
+                <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">                 
+                  <li><Link to={"/"}>Home</Link></li>
                   <li><Link to={"/dashboard"}>Dashboard</Link></li>
                   <li><Link to={"/about"}>About</Link></li>
                   <li><Link to={"/product"}>Product</Link></li>
@@ -74,19 +73,24 @@ function Header() {
                   </div>
                 </div>
                 <ul tabIndex={0} className="mt-6 z-[1] p-4 shadow menu menu-sm dropdown-content bg-primary rounded-box w-52">
-                  <li><Link to={"/login"}>Log In</Link></li>
-                  <li><Link to={"/registration"}>Registration</Link></li>
-                  <li>
-                    <a className="justify-between">
-                      Profile
-                      <span className="badge">New</span>
-                    </a>
-                  </li>
-                  <li><a>Settings</a></li>
-                  <li><a onClick={()=> {
-                    logoutUser();
-                    alert('Logout successful')
-                    }}>Logout</a></li>
+                  {!user && (
+                    <>
+                      <li><Link to={"/login"}>Log In</Link></li>
+                      <li><Link to={"/registration"}>Registration</Link></li>
+                    </>
+                  )}
+                  {user && (
+                    <>
+                      <li>
+                        <a className="justify-between">
+                          Profile
+                          <span className="badge">New</span>
+                        </a>
+                      </li>
+                      <li><a>Edit Profile</a></li>
+                      <li><a onClick={handleLogoutUser}>Logout</a></li>
+                    </>
+                  )}
                 </ul>
               </div>
             </div>

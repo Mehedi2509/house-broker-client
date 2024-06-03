@@ -10,17 +10,22 @@ const auth = getAuth(app);
 // eslint-disable-next-line react/prop-types
 const AuthProvider = ({children})=>{
     const [user, setUser] = useState(null);
+    const [loading, setLoading] = useState(true);
     const googleProvider = new GoogleAuthProvider();
 
     const createUser = (email,password) =>{
+        setLoading(true);
         return createUserWithEmailAndPassword(auth,email,password)
     }
 
     const loginUser = (email,password) =>{
+        setLoading(true);
         return signInWithEmailAndPassword(auth, email, password)
     }
 
     const logoutUser = () =>{
+        setLoading(true);
+        setUser(null);
         return signOut(auth)
     }
 
@@ -32,7 +37,11 @@ const AuthProvider = ({children})=>{
         const unscubcribe = onAuthStateChanged(auth, (currentUser) =>{
             if (currentUser){
                 setUser(currentUser);
+                setLoading(false);
                 console.log(currentUser);
+            }
+            else{
+                setLoading(false);
             }
         });
         return () => {
@@ -40,7 +49,7 @@ const AuthProvider = ({children})=>{
         }
     }, []);
 
-    const authInfo = { user, googleLogin, createUser, loginUser, logoutUser };
+    const authInfo = { user, googleLogin, createUser, loginUser, logoutUser, loading };
 
     return (
         <AuthContext.Provider value={authInfo}>

@@ -1,11 +1,15 @@
-import Header from "./components/Header"
+import { RouterProvider } from "react-router-dom"
+import AuthProvider from "./AuthProvider/AuthProvider"
+import { router } from "./routes/Routes"
 
 
 function App() {
 
   return (
     <>
-      <Header/>
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
     </>
   )
 }

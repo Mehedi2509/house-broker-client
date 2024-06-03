@@ -1,12 +1,16 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Registration = () => {
   const [passMatch, setPassMatch] = useState(true);
-  const {googleLogin, createUser} = useAuth();
+  const {googleLogin, createUser, user} = useAuth();
 
-  const handleCreateUser = (e) =>{
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location?.state?.from?.pathname || '/';
+
+  const handleCreateUser = async (e) =>{
     e.preventDefault();
 
     const form = e.target;
@@ -18,7 +22,7 @@ const Registration = () => {
 
     if (password === confirm_password){
       setPassMatch(true);
-      createUser(email, password);
+      await createUser(email, password);
       form.reset();
       alert('Creating accout successful')
     }else{
@@ -29,6 +33,12 @@ const Registration = () => {
   const handleGoogleLogin = () =>{
     googleLogin();
   }
+
+  useEffect(() => {
+    if(user){
+      navigate(from, {replace: true});
+    }
+  },[user, from, navigate]);
 
   return (
     <div className="registration-area">

@@ -1,18 +1,23 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
+import { useEffect } from "react";
 
 const Login = () => {
 
-  const {googleLogin, loginUser} = useAuth();
+  const {googleLogin, loginUser, user} = useAuth();
+  const navigate = useNavigate();
+  const location = useLocation();
 
-  const handleLoginUser = (e) =>{
+  const from = location?.state?.from?.pathname || '/';
+
+  const handleLoginUser = async (e) =>{
     e.preventDefault();
 
     const form = e.target;
     const email = form.email.value;
     const password = form.password.value;
 
-    loginUser(email, password);
+    await loginUser(email, password);
 
     form.reset();
     alert('Login successful');
@@ -21,6 +26,12 @@ const Login = () => {
   const handleGoogleLogin = () =>{
     googleLogin();
   }
+
+  useEffect(() => {
+    if(user){
+      navigate(from, {replace: true});
+    }
+  },[user, from, navigate]);
 
   return (
     <div className="registration-area">
