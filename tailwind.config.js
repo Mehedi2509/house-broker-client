@@ -49,6 +49,8 @@ export default {
       'purple': '#C5D5FF',
       'light-gray': '#edf0f8',
       'gray': '#D0E1EF',
+      'gray-2': '#535353',
+      'gray-3': '#373737',
       'gray-50': '#88898E',
       'gray-100': '#F1F8FE',
       'gray-150': '#FAFBFE',
