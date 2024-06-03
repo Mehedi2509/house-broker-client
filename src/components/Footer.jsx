@@ -1,5 +1,6 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import logo from '../images/logo/footer-logo.png';
-
+import { faFacebookF, faInstagram, faLinkedinIn, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
   return (
@@ -96,13 +97,13 @@ const Footer = () => {
               </div>
               <div className="social-profile flex items-center gap-5 lg:gap-3">
                 <a className="w-20 lg:w-16 xs:w-12 h-20 lg:h-16 xs:h-12 border border-white-20 rounded-full flex justify-center items-center text-28px lg:text-24px xs:text-20px text-black custom-transition hover:bg-primary hover:border-primary"
-                  href="#"><i className="fa-brands fa-facebook-f"></i></a>
+                  href="#"><FontAwesomeIcon icon={faFacebookF} /></a>
                 <a className="w-20 lg:w-16 xs:w-12 h-20 lg:h-16 xs:h-12 border border-white-20 rounded-full flex justify-center items-center text-28px lg:text-24px xs:text-20px text-black custom-transition hover:bg-primary hover:border-primary"
-                  href="#"><i className="fa-brands fa-twitter"></i></a>
+                  href="#"><FontAwesomeIcon icon={faInstagram} /></a>
                 <a className="w-20 lg:w-16 xs:w-12 h-20 lg:h-16 xs:h-12 border border-white-20 rounded-full flex justify-center items-center text-28px lg:text-24px xs:text-20px text-black custom-transition hover:bg-primary hover:border-primary"
-                  href="#"><i className="fa-brands fa-linkedin-in"></i></a>
+                  href="#"><FontAwesomeIcon icon={faTwitter} /></a>
                 <a className="w-20 lg:w-16 xs:w-12 h-20 lg:h-16 xs:h-12 border border-white-20 rounded-full flex justify-center items-center text-28px lg:text-24px xs:text-20px text-black custom-transition hover:bg-primary hover:border-primary"
-                  href="#"><i className="fa-brands fa-youtube"></i></a>
+                  href="#"><FontAwesomeIcon icon={faLinkedinIn} /></a>
               </div>
             </div>
             <div className="footer-bottom flex sm:flex-col sm:gap-5 justify-between items-center">

@@ -36,9 +36,13 @@ const AuthProvider = ({children})=>{
     useEffect(() =>{
         const unscubcribe = onAuthStateChanged(auth, (currentUser) =>{
             if (currentUser){
-                setUser(currentUser);
+                const name = currentUser.displayName;
+                const email = currentUser.email;
+                const img = currentUser.photoURL;
+                const userData = {name, email, img};
+
+                setUser(userData);
                 setLoading(false);
-                console.log(currentUser);
             }
             else{
                 setLoading(false);

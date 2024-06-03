@@ -110,7 +110,7 @@ const Registration = () => {
                     name="confirm_password"
                   />
                   {
-                    !passMatch && (<p className="mt-3 px-4 py-3 rounded-4px text-18px font-medium text-black bg-red-100">Password isn't matched</p>)
+                    !passMatch && (<p className="mt-3 px-4 py-3 rounded-4px text-18px font-medium text-black bg-red-100">Password is not matched</p>)
                   }
                   <label className="label flex justify-between mt-2">
                     <Link to={"/forget-password"} className="label-text-alt link link-hover text-16px">

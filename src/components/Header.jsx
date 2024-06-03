@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import headerLogo from "../images/logo/logo.png";
 import useAuth from "../hooks/useAuth";
+import IconUser from "../images/logo/uesr-icon.png";
 
 function Header() {
   const {user, logoutUser} = useAuth();
@@ -69,7 +70,12 @@ function Header() {
               <div className="dropdown dropdown-end">
                 <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                   <div className="w-10 rounded-full">
-                    <img alt="Tailwind CSS Navbar component" src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                    {
+                      user?.img && (<img alt="user profile picture" src={user?.img} />)
+                    }
+                    {
+                      !user?.img &&(<img alt="user profile picture" src={IconUser} />)
+                    }
                   </div>
                 </div>
                 <ul tabIndex={0} className="mt-6 z-[1] p-4 shadow menu menu-sm dropdown-content bg-primary rounded-box w-52">

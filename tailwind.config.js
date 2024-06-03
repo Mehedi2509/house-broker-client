@@ -6,8 +6,8 @@ export default {
   ],
   theme: {
     colors: {
-      'secondary-color': '#339966',
-      'primary-color': '#ff6600',
+      'secondary-color': '#FF6732',
+      'primary-color': '#6288F1',
       'primary-30': 'rgba(16, 84, 70, 0.30)',
       'primary-50': 'rgba(16, 84, 70, 0.50)',
       'primary-60': 'rgba(16, 84, 70, 0.60)',
@@ -239,8 +239,8 @@ export default {
     themes: [
       {
         light: {
-          primary: '#e6fbfb',
-          secondary: '#C67F43',
+          primary: '#6288F1',
+          secondary: '#FF6732',
           gray: '#D0E1EF',
           neutral: '#FBF5F3',
           "base-100": '#FFFFFF',
