@@ -8,7 +8,7 @@ const PrivateRoute = ({children}) => {
     const location = useLocation();
 
     if(loading){
-        <PreLoader/>
+       return <PreLoader/>
     }
 
     if(user){
