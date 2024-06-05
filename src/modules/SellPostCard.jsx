@@ -12,7 +12,7 @@ const SellPostCard = ({sellPost}) => {
     bathroom, sqft}, author: {name, email, img}} = sellPost;
 
     const handlePostDelete = async () =>{
-        await fetch(`http://localhost:4000/sellposts/${_id}`, {
+        await fetch(`https://house-borker-server.vercel.app/sellposts/${_id}`, {
             method: "DELETE",
         })
         .then((res) => res.json())

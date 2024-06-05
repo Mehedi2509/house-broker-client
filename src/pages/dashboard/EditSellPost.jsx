@@ -26,7 +26,7 @@ const handlePostEdit = async (e) =>{
 
     const data = {title, price, post_img, category, desc, location: {address, city, state, zipcode},others: {bedroom, bathroom, sqft}};
     console.log(data);
-    await fetch(`http://localhost:4000/sellposts/${_id}`, {
+    await fetch(`https://house-borker-server.vercel.app/sellposts/${_id}`, {
       method: "PATCH",
       headers: {
         "Content-type": "application/json",

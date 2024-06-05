@@ -51,7 +51,7 @@ export const router = createBrowserRouter([
             path: "/sellpost/:id",
             element: <SellPostDetails/>,
             loader: ({ params }) =>
-              fetch(`http://localhost:4000/sellposts/${params.id}`),
+              fetch(`https://house-borker-server.vercel.app/sellposts/${params.id}`),
         },
         {
             path: "/blog",
@@ -120,7 +120,7 @@ export const router = createBrowserRouter([
               </PrivateRoute>
             ),
             loader: ({ params }) =>
-              fetch(`http://localhost:4000/sellposts/${params.id}`),
+              fetch(`https://house-borker-server.vercel.app/sellposts/${params.id}`),
         },
         {
             path: "mybooking",

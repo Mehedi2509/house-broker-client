@@ -57,7 +57,7 @@ const AuthProvider = ({children})=>{
     
     // Fatching sell posts
     useEffect( ()=> {
-        fetch("http://localhost:4000/sellposts")
+        fetch("https://house-borker-server.vercel.app/sellposts")
         .then((res) => res.json())
         .then((data) => setSellPosts(data))
     }, []);
