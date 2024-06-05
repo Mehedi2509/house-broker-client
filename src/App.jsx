@@ -1,6 +1,7 @@
 import { RouterProvider } from "react-router-dom"
 import AuthProvider from "./AuthProvider/AuthProvider"
 import { router } from "./routes/Routes"
+import { Toaster } from "react-hot-toast"
 
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
     <>
     <AuthProvider>
       <RouterProvider router={router} />
+      <Toaster />
     </AuthProvider>
     </>
   )

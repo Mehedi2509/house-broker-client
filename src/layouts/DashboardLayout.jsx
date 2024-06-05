@@ -46,11 +46,12 @@ const DashboardLayout = () => {
                   <h6 className="text-black text-24px font-semibold">{user?.name}</h6>
                 </div>
                 <ul className="menu p-4 bg-bg-2 mt-6">
-                  <li className="text-black-2 text-20px font-semibold"><Link to={""}>My Sell Post</Link></li>
-                  <li className="text-black-2 text-20px font-semibold"><Link to={""}>My Booking</Link></li>
-                  <li className="text-black-2 text-20px font-semibold"><Link to={""}>Add Testimonial</Link></li>
-                  <li className="text-black-2 text-20px font-semibold"><Link to={""}>Add Blog Post</Link></li>
-                  <li className="text-black-2 text-20px font-semibold"><Link to={""}>Add Team Member</Link></li>
+                  <li className="text-black-2 text-20px font-semibold"><Link to={"mysellpost"}>My Sell Post</Link></li>
+                  <li className="text-black-2 text-20px font-semibold"><Link to={"addsellpost"}>Add Sell Post</Link></li>
+                  <li className="text-black-2 text-20px font-semibold"><Link to={"mybooking"}>My Booking</Link></li>
+                  <li className="text-black-2 text-20px font-semibold"><Link to={"addtestimonial"}>Add Testimonial</Link></li>
+                  <li className="text-black-2 text-20px font-semibold"><Link to={"addblogpost"}>Add Blog Post</Link></li>
+                  <li className="text-black-2 text-20px font-semibold"><Link to={"addteammember"}>Add Team Member</Link></li>
                 </ul>
               </div>
             </div>
