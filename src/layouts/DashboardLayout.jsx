@@ -48,10 +48,12 @@ const DashboardLayout = () => {
                 <ul className="menu p-4 bg-bg-2 mt-6">
                   <li className="text-black-2 text-20px font-semibold"><Link to={"mysellpost"}>My Sell Post</Link></li>
                   <li className="text-black-2 text-20px font-semibold"><Link to={"addsellpost"}>Add Sell Post</Link></li>
+                  {/* 
                   <li className="text-black-2 text-20px font-semibold"><Link to={"mybooking"}>My Booking</Link></li>
                   <li className="text-black-2 text-20px font-semibold"><Link to={"addtestimonial"}>Add Testimonial</Link></li>
                   <li className="text-black-2 text-20px font-semibold"><Link to={"addblogpost"}>Add Blog Post</Link></li>
-                  <li className="text-black-2 text-20px font-semibold"><Link to={"addteammember"}>Add Team Member</Link></li>
+                  <li className="text-black-2 text-20px font-semibold"><Link to={"addteammember"}>Add Team Member</Link></li> 
+                  */}
                 </ul>
               </div>
             </div>

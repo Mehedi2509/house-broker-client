@@ -1,15 +1,20 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Breadcrumb from "../components/Breadcrumb";
+import ContactImg from "../images/section-bg/image-five.jpg";
+import { faEnvelope, faLocationDot, faPhoneVolume } from "@fortawesome/free-solid-svg-icons";
 
 const ContactUs = () => {
   return (
-    <div>
+    <div className="contact-page">
+        <Breadcrumb pageName={'Contact Us'} />
         {/* <!-- Contact Info Area Start --> */}
         <div className="contact-info-area pt-[140px] lg:pt-[100px] md:pt-[80px] sm:pt-16">
-            <div className="custom-container">
+            <div className="container">
                 <div className="grid grid-cols-12 gap-6">
                     <div className="col-span-4 md:col-span-6 sm:col-span-12">
-                        <div className="contact-info-card flex flex-col items-center gap-8 p-10 md:px-6 pb-[72px] lg:pb-10 bg-primary rounded-30px">
+                        <div className="contact-info-card flex flex-col items-center gap-8 p-10 md:px-6 pb-[72px] lg:pb-10 bg-bg-2 rounded-30px">
                             <div className="icon w-[92px] h-[92px] rounded-full flex items-center justify-center bg-white">
-                                <i className="icon-phone text-[40px] text-black"></i>
+                                <FontAwesomeIcon className="icon-email text-[40px] text-black" icon={faPhoneVolume} />
                             </div>
                             <div className="content text-center">
                                 <h2 className="title text-black text-36px lg:text-27px md:text-36px sm:text-27px">Contact
@@ -24,9 +29,9 @@ const ContactUs = () => {
                         </div>
                     </div>
                     <div className="col-span-4 md:col-span-6 sm:col-span-12">
-                        <div className="contact-info-card flex flex-col items-center gap-8 p-10 md:px-6 pb-[72px] lg:pb-10 bg-primary rounded-30px">
+                        <div className="contact-info-card flex flex-col items-center gap-8 p-10 md:px-6 pb-[72px] lg:pb-10 bg-bg-2 rounded-30px">
                             <div className="icon w-[92px] h-[92px] rounded-full flex items-center justify-center bg-white">
-                                <i className="icon-email text-[40px] text-black"></i>
+                                <FontAwesomeIcon className="icon-email text-[40px] text-black" icon={faEnvelope} />
                             </div>
                             <div className="content text-center">
                                 <h2 className="title text-black text-36px lg:text-27px md:text-36px sm:text-27px">Mail address</h2>
@@ -39,9 +44,9 @@ const ContactUs = () => {
                         </div>
                     </div>
                     <div className="col-span-4 md:col-span-6 sm:col-span-12">
-                        <div className="contact-info-card flex flex-col items-center gap-8 p-10 md:px-6 pb-[72px] lg:pb-10 bg-primary rounded-30px">
+                        <div className="contact-info-card flex flex-col items-center gap-8 p-10 md:px-6 pb-[72px] lg:pb-10 bg-bg-2 rounded-30px">
                             <div className="icon w-[92px] h-[92px] rounded-full flex items-center justify-center bg-white">
-                                <i className="icon-address text-[40px] text-black"></i>
+                                <FontAwesomeIcon className="icon-email text-[40px] text-black" icon={faLocationDot} />
                             </div>
                             <div className="content text-center">
                                 <h2 className="title text-black text-36px lg:text-27px md:text-36px sm:text-27px">Office address</h2>
@@ -59,11 +64,11 @@ const ContactUs = () => {
         {/* <!-- Contact Info Area End --> */}
         <div className="contact-form-area py-[140px] lg:py-[100px] md:pt-[80px] md:pb-0 sm:pt-[60px]">
             {/* <!-- Submit form Start --> */}
-            <div className="custom-container">
-                <div className="grid grid-cols-12 md:gap-y-6 place-content-between gap-6 md:gap-0 bg-secondary rounded-[30px]">
+            <div className="container">
+                <div className="grid grid-cols-12 md:gap-y-6 place-content-between gap-6 md:gap-0 bg-bg-2 rounded-[30px]">
                     <div className="col-span-5 xl:col-span-6 md:col-span-12 pl-[72px] lg:pl-10 xl:pr-4 md:px-[60px] xs:px-6 -mb-[76px] md:mb-0 mt-[72px] lg:mt-10 md:mt-[60px] xs:mt-10">
                         <div className="image relative w-full h-[776px] xl:h-[650px] rounded-[30px] overflow-hidden xs:h-auto">
-                            <img className="absolute top-0 left-0 w-full h-full object-cover xs:h-auto xs:relative" src="resource/images/contact/img-2.jpg" alt="contact form image"></img>
+                            <img className="absolute top-0 left-0 w-full h-full object-cover xs:h-auto xs:relative" src={ContactImg} alt="contact form image"></img>
                         </div>
                     </div>
                     <div className="col-span-6 md:col-span-12 p-16  xl:p-10 xl:pl-0 lg:pr-10 md:p-[60px] md:pt-6 xs:px-6 xs:py-10">
@@ -105,7 +110,7 @@ const ContactUs = () => {
                                         </div>
                                     </div>
                                     <div className="col-span-12 mt-2">
-                                        <button className="theme-btn bg-primary relative px-14 py-6 rounded-[100px] text-black font-bodyFont text-18px leading-none font-semibold" type="submit">Submit</button>
+                                        <button className="theme-btn bg-black relative px-14 py-6 rounded-[100px] text-white font-bodyFont text-18px leading-none font-semibold" type="submit">Submit</button>
                                     </div>
                                 </div>
                             </form>

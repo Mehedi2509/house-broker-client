@@ -30,8 +30,7 @@ export default {
       'black-5(10)': 'rgba(0, 0, 0, 0.10);',
       'black-10': 'rgba(27, 27, 27, 0.10)',
       'black-20': 'rgba(27, 27, 27, 0.20)',
-      // 'black-20': 'rgba(255, 255, 255, 0.20)',
-      'black-40': 'rgba(0, 0, 0, 0.70)',
+      'black-40': 'rgba(0, 0, 0, 0.40)',
       'black-50': '#525256',
       'green': '#99cc00',
       'green-50': '#F0FAF0',
@@ -85,68 +84,68 @@ export default {
     },
     fontSize: {
       '95px': ['5.938rem', {
-        lineHeight: '6.5rem',
-        letterSpacing: '-0.297rem'
+        lineHeight: 'normal',
+        letterSpacing: 'normal'
       }],
       '72px': ['4.5rem', {
-        lineHeight: '4.95rem',
-        letterSpacing: '-0.09rem'
+        lineHeight: 'normal',
+        letterSpacing: 'normal'
       }],
       '64px': ['4rem', {
-        lineHeight: '4.8rem',
-        letterSpacing: '-0.2rem',
+        lineHeight: 'normal',
+        letterSpacing: 'normal'
       }],
       '52px': ['3.25rem', {
-        lineHeight: '3.9rem',
-        letterSpacing: '-0.023rem',
+        lineHeight: 'normal',
+        letterSpacing: 'normal'
       }],
       '48px': ['3rem', {
-        lineHeight: '3.6rem',
-        letterSpacing: '-0.15rem'
+        lineHeight: 'normal',
+        letterSpacing: 'normal'
       }],
       '42px': ['2.625rem', {
-        lineHeight: '3.5rem',
-        letterSpacing: '-0.15rem'
+        lineHeight: 'normal',
+        letterSpacing: 'normal'
       }],
       '36px': ['2.25rem', {
-        lineHeight: '3.15rem',
-        letterSpacing: '-0.045rem'
+        lineHeight: 'normal',
+        letterSpacing: 'normal'
       }],
       '32px': ['2rem', {
-        lineHeight: '2.8rem',
-        letterSpacing: '-0.04rem',
+        lineHeight: 'normal',
+        letterSpacing: 'normal'
       }],
       '28px': ['1.75rem', {
-        lineHeight: '2.275rem',
-        letterSpacing: '-0.088rem',
+        lineHeight: 'normal',
+        letterSpacing: 'normal'
       }],
       '27px': ['1.688rem', {
-        lineHeight: '2.194rem',
-        letterSpacing: '-0.034rem',
+        lineHeight: 'normal',
+        letterSpacing: 'normal'
       }],
       '24px': ['1.5rem', {
-        lineHeight: '1.875rem',
-        letterSpacing: '-0.015rem',
+        lineHeight: 'normal',
+        letterSpacing: 'normal'
       }],
       '22px': ['1.25rem', {
-        lineHeight: '1.75rem',
-        letterSpacing: '-0.015rem',
+        lineHeight: 'normal',
+        letterSpacing: 'normal'
       }],
       '20px': ['1.25rem', {
-        lineHeight: '1.5rem',
-        letterSpacing: '0.025rem',
+        lineHeight: 'normal',
+        letterSpacing: 'normal'
       }],
       '18px': ['1.125rem', {
-        lineHeight: '1.913rem',
-        letterSpacing: '-0.023rem'
+        lineHeight: 'normal',
+        letterSpacing: 'normal'
       }],
       '16px': ['1rem', {
-        lineHeight: '1.7rem',
-        letterSpacing: '-0.03rem'
+        lineHeight: 'normal',
+        letterSpacing: 'normal'
       }],
       '14px': ['0.875rem', {
-        lineHeight: '1.488rem',
-        letterSpacing: '-0.018rem'
+        lineHeight: 'normal',
+        letterSpacing: 'normal'
       }],
     },
     screens: {

@@ -13,7 +13,7 @@ const Footer = () => {
               <div className="content flex flex-col items-center gap-1">
                 <h6 className="short-title font-short leading-[26px] tracking-normal font-normal text-white">
                   Short-term Rental</h6>
-                <h2 className="title font-semibold text-center text-white">Client Testimonials</h2>
+                <h2 className="title font-semibold text-center text-white">Learn more about foreclosure</h2>
               </div>
               <p className="text-18px font-normal text-white">With LoopNets sophisticated presentation and
                 captivating interactive media solutions <br/> your property will stand out online just as much as

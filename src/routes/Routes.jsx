@@ -40,12 +40,18 @@ export const router = createBrowserRouter([
             element: <About/>
         },
         {
-            path: "/sellposts",
-            element: <SellPost/>
+            path: "/sellpost",
+            element: (
+              <PrivateRoute>
+                <SellPost/>
+              </PrivateRoute>
+            ),
         },
         {
             path: "/sellpost/:id",
-            element: <SellPostDetails/>
+            element: <SellPostDetails/>,
+            loader: ({ params }) =>
+              fetch(`http://localhost:4000/sellposts/${params.id}`),
         },
         {
             path: "/blog",
@@ -113,6 +119,8 @@ export const router = createBrowserRouter([
                 <EditSellPost/>
               </PrivateRoute>
             ),
+            loader: ({ params }) =>
+              fetch(`http://localhost:4000/sellposts/${params.id}`),
         },
         {
             path: "mybooking",

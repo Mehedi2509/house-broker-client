@@ -31,7 +31,7 @@ function Header() {
                 <li><Link to={"/"} className="w-full">Home</Link></li>
                 <li><Link to={"/dashboard"}>Dashboard</Link></li>
                 <li><Link to={"/about"}>About</Link></li>
-                <li><Link to={"/sellposts"}>Sell Post</Link></li>
+                <li><Link to={"/sellpost"}>Sell Post</Link></li>
                 <li><Link to={"/contact"}>Contact</Link></li>
                 <li>
                   <details>
@@ -86,7 +86,7 @@ function Header() {
           <li><Link to={"/"}>Home</Link></li>
           <li><Link to={"/dashboard"}>Dashboard</Link></li>
           <li><Link to={"/about"}>About</Link></li>
-          <li><Link to={"/product"}>Product</Link></li>
+          <li><Link to={"/sellpost"}>Product</Link></li>
           <li><Link to={"/contact"}>Contact</Link></li>
           <li>
             <a>Pages</a>

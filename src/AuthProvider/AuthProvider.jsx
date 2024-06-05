@@ -11,6 +11,7 @@ const auth = getAuth(app);
 const AuthProvider = ({children})=>{
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
+    const [sellPosts, setSellPosts] = useState([]);
 
     const googleProvider = new GoogleAuthProvider();
 
@@ -53,8 +54,20 @@ const AuthProvider = ({children})=>{
             return unscubcribe();
         }
     }, []);
+    
+    // Fatching sell posts
+    useEffect( ()=> {
+        fetch("http://localhost:4000/sellposts")
+        .then((res) => res.json())
+        .then((data) => setSellPosts(data))
+    }, []);
 
-    const authInfo = { user, googleLogin, createUser, loginUser, logoutUser, loading };
+    const handleDeleteSellPost = (id) => {
+        setSellPosts(sellPosts.filter((sellPost) => sellPost._id !== id));
+    };
+
+
+    const authInfo = { user, googleLogin, createUser, loginUser, logoutUser, loading, sellPosts, handleDeleteSellPost };
 
     return (
         <AuthContext.Provider value={authInfo}>

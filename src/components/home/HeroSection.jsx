@@ -1,4 +1,4 @@
-import heroBg from '../../images/section-bg/image-five.jpg';
+import heroBg from '../../images/section-bg/image-six.jpg';
 
 const HeroSection = () => {
   return (
@@ -8,7 +8,7 @@ const HeroSection = () => {
             <div className="max-w-xl">
             <h1 className="text-5xl font-bold text-white">Hello there</h1>
             <p className="py-6 text-20px text-white">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-            <button className="bg-green border-green text-black hover:bg-white hover:border-white text-18px font-semibold py-4 px-9">Get Started</button>
+            <button className="bg-bg-2 border-green text-black rounded-8px hover:bg-white hover:border-white text-18px font-semibold py-4 px-9">Get Started</button>
             </div>
         </div>
     </div>
