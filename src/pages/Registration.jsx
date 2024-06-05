@@ -1,6 +1,7 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 import { useEffect, useState } from "react";
+import toast from "react-hot-toast";
 
 const Registration = () => {
   const [passMatch, setPassMatch] = useState(true);
@@ -24,7 +25,7 @@ const Registration = () => {
       setPassMatch(true);
       await createUser(email, password);
       form.reset();
-      alert('Creating accout successful')
+      toast.success('Account Create Successful')
     }else{
       setPassMatch(false);
     }

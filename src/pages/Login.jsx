@@ -1,6 +1,7 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 import { useEffect } from "react";
+import toast from "react-hot-toast";
 
 const Login = () => {
 
@@ -20,7 +21,7 @@ const Login = () => {
     await loginUser(email, password);
 
     form.reset();
-    alert('Login successful');
+    toast.success('Login Successful');
   }
 
   const handleGoogleLogin = () =>{

@@ -2,13 +2,14 @@ import { Link } from "react-router-dom";
 import headerLogo from "../images/logo/logo.png";
 import useAuth from "../hooks/useAuth";
 import IconUser from "../images/logo/uesr-icon.png";
+import toast from "react-hot-toast";
 
 function Header() {
   const {user, logoutUser} = useAuth();
 
   const handleLogoutUser = () =>{
     logoutUser();
-    alert('Logout successful')
+    toast.success('Logout successful');
   }
 
     return (
