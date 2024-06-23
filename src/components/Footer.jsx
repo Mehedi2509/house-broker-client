@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="footer-section">
         <div className="footer-top py-[140px] lg:py-[120px] md:py-[100px] sm:py-20 bg-no-repeat bg-cover bg-center"
           style={{backgroundImage: `url(${FooterBg})`,}}>
-          <div className="custom-container">
+          <div className="container-full px-6 xs:px-3 max-w-[1920px] mx-auto">
             <div className="section-title flex flex-col items-center gap-4 text-center">
               <div className="content flex flex-col items-center gap-1">
                 <h6 className="short-title font-short leading-[26px] tracking-normal font-normal text-white">
@@ -30,7 +30,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="footer-wrapper bg-black">
-          <div className="container-fluid max-w-[1920px] mx-auto">
+          <div className="container-full px-6 xs:px-3 max-w-[1920px] mx-auto">
             <div className="link-area py-20 flex items-start justify-between xl:gap-20 lg:gap-6 lg:flex-wrap">
               <div className="col-span-2 xs:col-span-3">
                 <div className="footer-widget">
@@ -75,7 +75,7 @@ const Footer = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-span-2 xs:col-span-3">
+              <div className="col-span-2 xs:col-span-3 min-w-[370px]">
                 <div className="footer-widget">
                   <h6 className="footer-widget-title font-medium text-white mb-2">
                     Marketplace</h6>
