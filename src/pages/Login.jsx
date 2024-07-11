@@ -5,7 +5,7 @@ import toast from "react-hot-toast";
 
 const Login = () => {
 
-  const {googleLogin, loginUser, user} = useAuth();
+  const {googleLogin, loginUser, user, setUser} = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -42,7 +42,7 @@ const Login = () => {
           body: JSON.stringify(userInfo)
         })
         .then((res) => res.json())
-        .then((data) => console.log(data?.email))
+        .then((data) => setUser(data));
       }
     })
   }

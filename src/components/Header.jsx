@@ -7,6 +7,8 @@ import toast from "react-hot-toast";
 function Header() {
   const {user, logoutUser} = useAuth();
 
+  console.log(user);
+
   const handleLogoutUser = () =>{
     logoutUser();
     toast.success('Logout successful');

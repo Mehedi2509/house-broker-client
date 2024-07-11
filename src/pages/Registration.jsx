@@ -5,7 +5,7 @@ import toast from "react-hot-toast";
 
 const Registration = () => {
   const [passMatch, setPassMatch] = useState(true);
-  const {googleLogin, createUser, user} = useAuth();
+  const {googleLogin, createUser, user, setUser} = useAuth();
 
   const navigate = useNavigate();
   const location = useLocation();
@@ -15,15 +15,38 @@ const Registration = () => {
     e.preventDefault();
 
     const form = e.target;
-    // const name = form.name.value;
-    // const img_uri = form.img_url.value;
+    const name = form.name.value;
+    const img_uri = form.img_url.value;
     const email = form.email.value;
     const password = form.password.value;
     const confirm_password = form.confirm_password.value;
 
+
     if (password === confirm_password){
       setPassMatch(true);
-      await createUser(email, password);
+      createUser(email, password).then((data) => {
+
+        if(data?.user?.email){
+
+          const userInfo = {
+            email: data?.user?.email,
+            name: name,
+            img: img_uri,
+            role: 'user',
+          };
+
+          fetch('http://localhost:4000/users', {
+            method: "POST",
+            headers: {
+              'Content-Type':"application/json"
+            },
+            body: JSON.stringify(userInfo)
+          })
+          .then((res) => res.json())
+          .then((data) => setUser(data));
+        }
+      });
+
       form.reset();
       toast.success('Account Create Successful')
     }else{
