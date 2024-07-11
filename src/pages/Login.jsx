@@ -25,7 +25,26 @@ const Login = () => {
   }
 
   const handleGoogleLogin = () =>{
-    googleLogin();
+    googleLogin().then((data) =>{
+      if(data?.user?.email){
+        const userInfo = {
+          email: data?.user?.email,
+          name: data?.user?.displayName,
+          img: data?.user?.photoURL,
+          role: 'user',
+        };
+
+        fetch('http://localhost:4000/users', {
+          method: "POST",
+          headers: {
+            'Content-Type':"application/json"
+          },
+          body: JSON.stringify(userInfo)
+        })
+        .then((res) => res.json())
+        .then((data) => console.log(data?.email))
+      }
+    })
   }
 
   useEffect(() => {
